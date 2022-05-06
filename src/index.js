@@ -13,7 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
     newTask.appendChild(text);
     tasks.appendChild(newTask);
     form.reset();
+
+    let checkButton = document.createElement('button');
+    checkButton.innerHTML = "x";
+    newTask.appendChild(checkButton);
+
+    checkButton.addEventListener("click", function() {
+      newTask.remove();
+      checkButton.remove();
+  })
+
 })
+
 
 })
 
